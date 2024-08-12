@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+<div class="header-container">
+    <h1>ICookie <img src="../resources/icon.PNG" alt="cat" width="50"></h1>
+    <p>Social network for cooking recipe sharing</p>
+    <h2>Registration page</h2>
+    <p id="form-text" class="text-center">Please fill in all the fields to become a part of our community.</p>
+</div>
+
+<div class="form-div">
+    <form class="reg-form">
+        <fieldset class="form-block">
+            <legend>Main information</legend>
+            <div>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required data-reg="[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}">
+                <p id="emailError" class="error">It should contain @ and a dot.</p>
+            </div>
+            <div>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <label for="birthdate">Birth date:</label><br>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-block">
+            <legend>About you</legend>
+            <div>
+                <label for="first_name">First name:</label><br>
+                <input type="text" id="first_name" name="first_name" required data-reg="^[A-Za-zА-ЯЁа-яё]+$">
+                <p id="firstnameError" class="error">Only letters</p>
+            </div>
+            <div>
+                <label for="last_name">Last name:</label><br>
+                <input type="text" id="last_name" name="last_name" required data-reg="^[A-Za-zА-ЯЁа-яё]+$">
+                <p id="lastnameError" class="error">Only letters</p>
+            </div>
+            <div>
+                <label for="region">Region:</label><br>
+                <select id="region" name="region" required>
+                    <option value="">Choose your region</option>
+                    <option value="ru">Europe</option>
+                    <option value="us">Asia</option>
+                    <option value="de">Africa</option>
+                    <option value="fr">America</option>
+                    <option value="cn">Australia and Oceania</option>
+                </select>
+            </div>
+            <div>
+                <label for="country">Country:</label><br>
+                <input type="text" id="country" name="country" required data-reg="^[A-Za-zА-ЯЁа-яё]+$">
+                <p id="countryError" class="error">Only letters</p>
+            </div>
+            <div>
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city" required data-reg="^[A-Za-zА-ЯЁа-яё]+$">
+                <p id="cityError" class="error">Only letters</p>
+            </div>
+            <div>
+                <label for="bio">Some words about you:</label><br>
+                <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <label>Favourite cuisines:</label><br>
+                <input type="checkbox" id="italian" name="favorite_cuisines[]" value="Italian">
+                <label for="italian">Italian</label><br>
+                <input type="checkbox" id="japanese" name="favorite_cuisines[]" value="Japanese">
+                <label for="japanese">Japanese</label><br>
+                <input type="checkbox" id="mexican" name="favorite_cuisines[]" value="Mexican">
+                <label for="mexican">Mexican</label><br>
+                <input type="checkbox" id="indian" name="favorite_cuisines[]" value="Indian">
+                <label for="indian">Indian</label><br>
+                <input type="checkbox" id="chinese" name="favorite_cuisines[]" value="Chinese">
+                <label for="chinese">Chinese</label><br>
+                <input type="checkbox" id="french" name="favorite_cuisines[]" value="French">
+                <label for="french">French</label><br>
+            </div>
+            <div>
+                <label for="favorite_dishes">Favourite dishes:</label><br>
+                <input type="text" id="favorite_dishes" name="favorite_dishes">
+            </div>
+            <div>
+                <label for="favorite_foods">Favourite foods:</label><br>
+                <input type="text" id="favorite_foods" name="favorite_foods">
+            </div>
+        </fieldset>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <p id="thanks" class="hidden text-center">Excellent! Thank you for registration.</p>
+    <img id="cuteimg" src="../resources/tkthao219-peach.gif" alt="gif" width="200" class="hidden text-center">
+</div>
+</body>
+</html>

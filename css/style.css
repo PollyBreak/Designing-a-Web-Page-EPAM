@@ -1,0 +1,129 @@
+/* Основные стили для всей страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f0e7; /* Нежный бежево-молочный фон */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Используем Flexbox */
+    flex-direction: column;
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    min-height: 100vh; /* Минимальная высота страницы */
+}
+
+/* Центрирование содержимого */
+.form-div {
+    background-color: #ffffff; /* Белый фон для формы */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box; /* Гарантирует, что padding не увеличивает ширину */
+}
+
+/* Заголовки */
+h1, h2, h3, p {
+    text-align: center;
+    color: #333333;
+    margin: 10px 0; /* Отступы для разделения элементов */
+}
+
+/* Стили для полей формы */
+.reg-form {
+    display: block;
+    width: 100%;
+}
+
+/* Блоки формы */
+.form-block {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%; /* Заставляем блоки занимать всю ширину */
+    box-sizing: border-box; /* Гарантирует, что padding не увеличивает ширину */
+}
+
+/* Легенды для блоков */
+.form-block legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555555;
+}
+
+/* Поля ввода и кнопки */
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Чекбоксы */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Кнопка отправки */
+button[type="submit"] {
+    background-color: #d9b382; /* Цвет кнопки */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #b89764; /* Темный оттенок кнопки при наведении */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    .form-div {
+        padding: 15px;
+    }
+
+    .form-block {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="date"], select, textarea {
+        font-size: 12px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+.header-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-container h1,
+.header-container p,
+.header-container h2 {
+    margin: 10px 0;
+    display: block;
+}
+
+p {
+    padding-bottom: 10px;
+    padding-top: 0;
+    margin: 0;
+}
+
+
+.hidden {
+    display: none;
+}
